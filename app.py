@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///hair.db")
 
-@app.route("https://cjviswa.github.io/Hair-Dresser/", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "GET":
         return render_template("index.html")
