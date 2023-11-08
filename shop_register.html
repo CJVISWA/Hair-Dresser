@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Shop Registration
+
+{% endblock %}
+
+{% block main %}
+    <form action="/shop_register" method="post">
+        <h1>Shop Registration</h1><br>
+        Hello {{ username }} You Can Now Create SHOP <br>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus name="shop_name" placeholder="Shop Name" required type="text" >
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" name="branch" placeholder="Branch" required type="text" >
+        </div>
+        <div class="mb-3">
+            Select No OF working_days<br>
+            <input name="working_days" id="1" value="1" type="radio">1
+            <input name="working_days" id="2" value="2"type="radio">2
+            <input name="working_days" id="3" value="3" type="radio">3
+            <input name="working_days" id="4" value="4" type="radio">4
+            <input name="working_days" id="5" value="5" type="radio">5
+            <input name="working_days" id="6" value="6" type="radio">6
+            <input name="working_days" id="7" value="7" type="radio">7
+        </div>
+        <div class="mb-3">
+            Select Holiday<br>
+            <input name="leave_day" id="monday" value="Monday" type="radio">Monday
+            <input name="leave_day" id="tuesday" value="Tuesday" type="radio">Tuesday
+            <input name="leave_day" id="wednesday" value="Wednesday" type="radio">Wednesday<br>
+            <input name="leave_day" id="thursday"  value="Thursday" type="radio">Thursday 
+            <input name="leave_day" id="friday"  value="Friday" type="radio">Friday
+            <input name="leave_day" id="saturday"  value="Saturday" type="radio">Saturday
+            <input name="leave_day" id="sunday"  value="Sunday" type="radio">Sunday
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" name="username" placeholder="Username" required type="text" >
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" name="password"  placeholder="Password" required type="password">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" name="mobile_no" placeholder="Mobile No" required type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" name="email" placeholder="Email" required type="email">
+        </div>
+        <div class="mb-3">
+            Select Gender
+            <input name="gender" id="male"  value="Male" type="radio">Male
+            <input name="gender" id="female"  value="Female" type="radio">Female
+            <input name="gender" id="others"  value="Others" type="radio">Others
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" name="seats" placeholder="No.Of.Seats" required type="text" >
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" name="address" placeholder="Shop Address" required type="text">
+        </div>
+        <button type="submit">SUBMIT</button><br>
+    </form>
+
+
+
+{% endblock %}
